@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const URLGetter = () => {
-  const {urlSuffix} = useParams<{ urlSuffix: string }>();
+  const {urlSuffix} = useParams();
   const [newURL, setNewURL] = useState('');
   const [page, setPage] = useState((<></>));
   useEffect(() => {

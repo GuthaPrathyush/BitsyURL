@@ -10,10 +10,10 @@ const DB_NAME = process.env.DB_NAME;
 const DB_USER = process.env.DB_USER;
 const DB_PASSWORD = process.env.DB_PASSWORD;
 const PORT = process.env.PORT;
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '1';
+// process.env.NODE_TLS_REJECT_UNAUTHORIZED = '1';
 
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: 'http://10.1.165.248:5173',
     methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'auth-token', 'index-to-modify'],
     credentials: true
