@@ -21,6 +21,7 @@ const corsOptions = {
 
 app.use(express.json());
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 
 mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.wnzr6.mongodb.net/${DB_NAME}`);
