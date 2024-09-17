@@ -1,4 +1,4 @@
-const {url} = require('../Views/BitsyURLViews');
+const {url} = require('../Models/BitsyURLViews');
 
 const Alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 const alphabet_length = Alphabet.length;
