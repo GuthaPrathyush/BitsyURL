@@ -13,7 +13,7 @@ const PORT = process.env.PORT;
 // process.env.NODE_TLS_REJECT_UNAUTHORIZED = '1';
 
 const corsOptions = {
-    origin: 'http://10.1.165.248:5173',
+    origin: 'https://bitsyurl.vercel.app',
     methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'auth-token', 'index-to-modify'],
     credentials: true
