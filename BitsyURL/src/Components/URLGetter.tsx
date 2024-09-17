@@ -9,7 +9,7 @@ const URLGetter = () => {
   useEffect(() => {
     const urlGetter = async() => {
       try {
-        const response = await axios.post('https://bitsyurl-backend.onrender.com/GetURL', JSON.stringify({url: urlSuffix}), {
+        const response = await axios.post('https://bitsyurl-backend.vercel.app/GetURL', JSON.stringify({url: urlSuffix}), {
             headers: {
                 Accept: 'application/form-data',
                 'Content-Type': 'application/json'
