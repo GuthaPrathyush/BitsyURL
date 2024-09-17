@@ -15,8 +15,7 @@ const PORT = process.env.PORT;
 const corsOptions = {
     origin: 'https://bitsyurl.vercel.app',
     methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'auth-token', 'index-to-modify'],
-    credentials: true
+    allowedHeaders: ['Content-Type', 'Authorization', 'Accept']
 };
 
 app.use(express.json());
