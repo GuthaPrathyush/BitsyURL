@@ -1,0 +1,38 @@
+footer {
+    width: 100%;
+    background-color: #213555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+    text-align: center;
+    img {
+        width: 150px;
+        cursor: pointer;
+    }
+    .heading {
+        color: #F0F0F0;
+        margin-top: 20px;
+    }
+    .socialNetworkDiv {
+        margin-top: 10px;
+        width: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        i {
+            font-size: 20px;
+            color: #3fc0f5;
+        }
+    }
+    hr {
+        width: 90%;
+        border: 1px solid #E5D283;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    p {
+        color: white;
+        font-size: 14px;
+    }
+}

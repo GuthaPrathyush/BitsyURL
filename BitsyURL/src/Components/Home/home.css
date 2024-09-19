@@ -1,0 +1,208 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4F709C;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: calc(100vh - 70px);
+        padding: 0px 250px;
+        .disabledURL:disabled {
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid rgb(194, 194, 194);
+            margin-top: 20px;
+            outline: none;
+            font-size: 18px;
+            color: #e0b400;
+            padding-left: 5px;
+            background-color: white;
+        }
+        .urlMaker {
+            width: 100%;
+            background-color: #F0F0F0;
+            border-radius: 15px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .heading {
+                display: flex;
+                align-items: center;
+                .Logo {
+                    width: 30px;
+                    margin-right: 10px;
+                }
+                p {
+                    font-weight: bold;
+                    font-size: 19px;
+                    color: #213555;
+                }
+            }
+            .urlInput {
+                width: 100%;
+                height: 50px;
+                border-radius: 5px;
+                border: 1px solid rgb(194, 194, 194);
+                margin-top: 20px;
+                outline: none;
+                font-size: 18px;
+                color: #e0b400;
+                padding-left: 5px;
+            }
+            .customizeHeading {
+                display: flex;
+                align-items: center;
+                margin-top: 20px;
+                i {
+                    color: #213555;
+                    margin-right: 10px;
+                }
+                p {
+                    font-size: 18px;
+                    font-weight: bolder;
+                    color: #213555;
+                }
+            }
+            .customizing {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                justify-content: space-between;
+                margin-top: 20px;
+                .mainUrl:disabled {
+                    width: 100%;
+                    height: 50px;
+                    border-radius: 5px;
+                    border: 1px solid rgb(194, 194, 194);
+                    outline: none;
+                    font-size: 18px;
+                    color: rgb(74, 74, 74);
+                    padding-left: 5px;
+                    background-color: white;
+                    flex-basis: 55%;
+                }
+                .sideURL {
+                    width: 100%;
+                    height: 50px;
+                    border-radius: 5px;
+                    border: 1px solid rgb(194, 194, 194);
+                    outline: none;
+                    font-size: 18px;
+                    color: #e0b400;
+                    padding-left: 5px;
+                    flex-basis: 43%;
+                }
+            }
+            .shortenButton {
+                align-self: center;
+                margin-top: 30px;
+                width: 300px;
+                height: 50px;
+                font-size: 18px;
+                border: 1px solid rgb(179, 179, 179);
+                border-radius: 10px;
+                color: white;
+                background-color: #213555;
+                cursor: pointer;
+            }
+            .customized {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin-top: 20px;
+                .disabledURL {
+                    margin-top: 0;
+                    flex-grow: 1;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+                .copyButton {
+                    width: 75px;
+                    height: 50px;
+                    background-color: #3fc0f5;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    i {
+                        font-size: 22px;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 989px) {
+    .Home {
+        .container {
+            padding: 0 150px;
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .Home {
+        .container {
+            padding: 0 50px;
+        }
+    }
+}
+@media screen and (max-width: 524px) {
+    .Home {
+        .container {
+            padding: 0 20px;
+            .urlMaker {
+                padding: 15px;
+                .customizing {
+                    flex-direction: column;
+                    .mainUrl:disabled {
+                        flex-basis: unset;
+                    }
+                    .sideURL {
+                        flex-basis: unset;
+                        margin-top: 5px;
+                    }
+                }
+                .shortenButton {
+                    width: 200px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 459px) {
+    .Home {
+        .container {
+            padding: 0;
+            .urlMaker {
+                border-radius: 0;
+                background-color: #4F709C;
+                .heading {
+                    p {
+                        color: #F0F0F0
+                    }
+                }
+                .customizeHeading {
+                    i {
+                        color: #e0b400;
+                    }
+                    p {
+                        color: #f0f0f0;
+                    }
+                }
+                .shortenButton {
+                    border: 1px solid #3fc0f5;
+                }
+            }
+        }
+    }
+}

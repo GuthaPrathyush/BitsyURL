@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Error from "./Error/Error";
 
 const URLGetter = () => {
   const {urlSuffix} = useParams();
@@ -18,7 +19,7 @@ const URLGetter = () => {
         setNewURL(response.data.url);
       }
       catch(e) {
-        setPage((<>URL Not found!</>));
+        setPage(<Error/>);
       }
     }
     urlGetter();
