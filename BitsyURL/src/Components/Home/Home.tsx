@@ -23,7 +23,7 @@ const Home = () => {
       shortenButtonRef.current.disabled = false;
       return ;
     }
-    const generateURLPromise = axios.post('https://bitsyurl-backend.vercel.app', JSON.stringify({url: originalURL, suffix: customizedURL}), {
+    const generateURLPromise = axios.post('https://bitsyurl-backend.vercel.app/GenerateURL', JSON.stringify({url: originalURL, suffix: customizedURL}), {
       headers: {
         Accept: 'application/form-data',
         'Content-Type': 'application/json'
