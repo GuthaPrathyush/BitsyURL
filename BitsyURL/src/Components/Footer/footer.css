@@ -23,6 +23,7 @@ footer {
         i {
             font-size: 20px;
             color: #3fc0f5;
+            cursor: pointer;
         }
     }
     hr {
