@@ -16,6 +16,7 @@ const getNewURLSuffix = length => {
 
 const GenerateURL = async (req, res) => {
     let old_url = String(req.body.url).trim();
+    let new_url = String(req.body.suffix).trim();
     if(!urlRegex.test(old_url)) {
         return res.status(404).json({success: false, message: "Invalid URL!"});
     }
@@ -24,12 +25,28 @@ const GenerateURL = async (req, res) => {
     }
     const check = await url.findOne({originalURL: old_url});
     if(check) {
-        return res.json({success: true, url: check.mappedURL});
+        if(new_url != '') {
+            const check2 = await url.findOne({mappedURL: new_url});
+            if(check2) {
+                return res.status(404).json({success: false, message: "Suffix already exists!"});
+            }
+            else {
+                try {
+                    await url.findOneAndUpdate({originalURL: old_url}, {mappedURL: new_url});
+                }
+                catch(e) {
+                    return res.status(500).json({success: false, message: "Error generating the URL"});
+                }
+                return res.json({success: true, url: new_url});
+            }
+        }
+        else {
+            return res.json({success: true, url: check.mappedURL});
+        }
     }
-    let new_url = String(req.body.suffix).trim();
     if(new_url != '') {
-        const check = await url.findOne({mappedURL: new_url});
-        if(check) {
+        const check2 = await url.findOne({mappedURL: new_url});
+        if(check2) {
             return res.status(404).json({success: false, message: "Suffix already exists!"});
         }
     }
