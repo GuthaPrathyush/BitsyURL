@@ -26,6 +26,7 @@ const GenerateURL = async (req, res) => {
     const check = await url.findOne({originalURL: old_url});
     if(check) {
         if(new_url != '') {
+            new_url = encodeURIComponent(new_url);
             const check2 = await url.findOne({mappedURL: new_url});
             if(check2) {
                 return res.status(404).json({success: false, message: "Suffix already exists!"});
